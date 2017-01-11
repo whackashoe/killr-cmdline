@@ -13,8 +13,8 @@ if [[ "$stdin" =~ ^/dev/pts/[0-9] ]]; then
         then
             echo "No filename supplied"
     else
-        curl -X POST --data-binary @$1 https://killr.io
+        curl -X POST --data-binary @$1 https://killr.io/create
     fi
 else
-    curl -X POST --data-binary  @- https://killr.io
+    curl -X POST --data-binary  @- https://killr.io/create
 fi
